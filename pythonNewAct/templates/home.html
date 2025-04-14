@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News Headlines</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap');
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #ffe0f0, #ffc6e2, #ffddee);
+      color: #704241;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      color: #cc2e77;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(255, 105, 180, 0.5);
+      background: linear-gradient(to right, #ff91bc, #ff60a6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .article {
+      background: rgba(255, 240, 250, 0.95);
+      padding: 25px;
+      margin: 25px auto;
+      border-radius: 18px;
+      box-shadow: 4px 4px 20px rgba(255, 182, 193, 0.6);
+      max-width: 800px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2.5px dashed #ffb6d1;
+    }
+
+    .article:hover {
+      transform: translateY(-6px);
+      box-shadow: 6px 6px 25px rgba(255, 105, 180, 0.6);
+      background: rgba(255, 240, 250, 1);
+    }
+
+    h2 {
+      color: #e91e63;
+      font-size: 1.9em;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 1.15em;
+      line-height: 1.7;
+      font-family: 'Inter', sans-serif;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 1.1em;
+      color: #c2185b;
+      text-decoration: none;
+      border-bottom: 2px dotted transparent;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      font-weight: bold;
+      background: #ffd6eb;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    a:hover {
+      color: #ff69b4;
+      border-bottom: 2px dotted #ff69b4;
+      text-shadow: 1px 1px 6px rgba(255, 20, 147, 0.6);
+      background: #ffe3f3;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, #ffa6c9, #ffffff, #ffa6c9);
+      margin: 35px 0;
+    }
+
+    .search-container {
+      text-align: center;
+      margin: 30px 0;
+      padding: 15px;
+      background: rgba(255, 230, 240, 0.8);
+      border-radius: 15px;
+      box-shadow: 2px 2px 10px rgba(255, 192, 203, 0.4);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .search-container input[type="text"] {
+      padding: 12px;
+      font-size: 1em;
+      border: 2px solid #ff99cc;
+      border-radius: 12px;
+      margin-right: 10px;
+      width: 280px;
+      background: #fff0f5;
+      color: #b03060;
+      outline: none;
+      transition: 0.3s ease;
+      box-shadow: inset 1px 1px 5px rgba(255, 182, 193, 0.5);
+    }
+
+    .search-container input[type="text"]::placeholder {
+      color: #d94f8c;
+      font-style: italic;
+    }
+
+    .search-container input[type="text"]:focus {
+      border-color: #ff69b4;
+      background-color: #ffe9f3;
+    }
+
+    .search-container button {
+      padding: 12px 18px;
+      font-size: 1em;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 2px 2px 8px rgba(255, 105, 180, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .search-container button:hover {
+      background-color: #ff3385;
+      transform: scale(1.05);
+    }
+
+    .search-container button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+
+<div class="search-container">
+  <form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Search adorable articles..." required>
+    <button type="submit">💖 Search</button>
+    <button type="button" onclick="resetArticles()">🌸 Show All</button>
+  </form>
+</div>
+
+<div class="abs">
+  <h1>ABS-CBN News Headlines</h1>
+
+  <div class="article">
+    <h2>Oil Prices Surge Amid Middle East Tensions</h2>
+    <p>ABS-CBN News</p>
+    <p>Global oil prices jump 5% after renewed conflict in the Red Sea disrupts shipping routes. Analysts warn of impact on Philippine inflation.</p>
+    <a href="https://www.abs-cbn.com/news/oil-prices-feb2025" target="_blank">Read full article</a>
+  </div>
+  <hr>
+  <div class="article">
+    <h2>LPA Spotted East of Mindanao</h2>
+    <p>ABS-CBN News</p>
+    <p>A low-pressure area is expected to bring rains over Visayas and Mindanao this weekend, says PAGASA.</p>
+    <a href="https://www.abs-cbn.com/weather-update-feb2025" target="_blank">Read full article</a>
+  </div>
+  <hr>
+</div>
+
+<div class="gma">
+  <h1>GMA News Headlines</h1>
+  <div class="article">
+    <h2>President Marcos Jr. to Visit Japan Next Week</h2>
+    <p>GMA News</p>
+    <p>Bilateral talks expected to focus on defense cooperation and agricultural investments.</p>
+    <a href="https://www.gmanetwork.com/news/president-japan-visit" target="_blank">Read full article</a>
+  </div>
+  <hr>
+  <div class="article">
+    <h2>Gilas Pilipinas Qualifies for FIBA Asia Cup</h2>
+    <p>GMA News</p>
+    <p>National basketball team secures spot after thrilling win against South Korea.</p>
+    <a href="https://www.gmanetwork.com/sports/gilas-fiba" target="_blank">Read full article</a>
+  </div>
+  <hr>
+</div>
+
+<div class="tv5">
+  <h1>TV5 News Headlines</h1>
+  <div class="article">
+    <h2>MMDA Proposes New Number Coding Scheme</h2>
+    <p>TV5 News</p>
+    <p>Modified policy to exempt electric vehicles and hybrids during coding hours.</p>
+    <a href="https://www.tv5.com.ph/mmda-coding-2025" target="_blank">Read full article</a>
+  </div>
+  <hr>
+  <div class="article">
+    <h2>Free College Entrance Exams Nationwide</h2>
+    <p>TV5 News</p>
+    <p>CHED partners with universities to waive fees for low-income students.</p>
+    <a href="https://www.tv5.com.ph/ched-free-exams" target="_blank">Read full article</a>
+  </div>
+  <hr>
+</div>
+
+<script>
+  document.getElementById('searchForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    let query = document.getElementById('searchInput').value.toLowerCase();
+    let foundAny = false;
+
+    const newsSections = document.querySelectorAll('.abs, .gma, .tv5');
+
+    newsSections.forEach(section => {
+      let articles = section.querySelectorAll('.article');
+      let foundInSection = false;
+
+      articles.forEach(article => {
+        let title = article.querySelector('h2').textContent.toLowerCase();
+        if (title.includes(query)) {
+          article.style.display = 'block';
+          article.style.backgroundColor = "#ffe0f0";
+          foundInSection = true;
+          foundAny = true;
+        } else {
+          article.style.display = 'none';
+        }
+      });
+
+      section.style.display = foundInSection ? 'block' : 'none';
+    });
+
+    if (!foundAny) {
+      alert("No articles found matching your search, sweetie 🌸");
+    }
+  });
+
+  function resetArticles() {
+    const newsSections = document.querySelectorAll('.abs, .gma, .tv5');
+
+    newsSections.forEach(section => {
+      section.style.display = 'block';
+      let articles = section.querySelectorAll('.article');
+      articles.forEach(article => {
+        article.style.display = 'block';
+        article.style.backgroundColor = '';
+      });
+    });
+
+    document.getElementById('searchInput').value = '';
+  }
+</script>
+
+</body>
+</html>
